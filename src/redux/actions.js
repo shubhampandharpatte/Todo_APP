@@ -1,14 +1,13 @@
-// actions.js
-import {
-  ADD_TODO,
-  TOGGLE_TODO,
-  REMOVE_TODO,
-  MARK_COMPLETED,
-  MARK_INCOMPLETE,
-  FILTER_TODOS,
-  MARK_ALL_COMPLETED,
-  UPDATE_SEARCH_TERM,
-} from './actionTypes';
+// src/redux/actions.js
+export const ADD_TODO = 'ADD_TODO';
+export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const REMOVE_TODO = 'REMOVE_TODO';
+export const MARK_COMPLETED = 'MARK_COMPLETED';
+export const MARK_INCOMPLETE = 'MARK_INCOMPLETE';
+export const FILTER_TODOS = 'FILTER_TODOS';
+export const MARK_ALL_COMPLETED = 'MARK_ALL_COMPLETED';
+export const CLEAR_COMPLETED_TODOS = 'CLEAR_COMPLETED_TODOS';
+export const UPDATE_SEARCH_TERM = 'UPDATE_SEARCH_TERM';
 
 export const addTodo = (text) => ({
   type: ADD_TODO,
@@ -42,6 +41,10 @@ export const filterTodos = (filter) => ({
 
 export const markAllCompleted = () => ({
   type: MARK_ALL_COMPLETED,
+});
+
+export const clearCompletedTodos = () => ({
+  type: CLEAR_COMPLETED_TODOS,
 });
 
 export const updateSearchTerm = (searchTerm) => ({
